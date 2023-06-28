@@ -6,6 +6,7 @@ const lucid = await Lucid.new(
   "Preprod",
 );
 
+//addr_test1qzx9hu8j4ah3auytk0mwcupd69hpc52t0cw39a65ndrah86djs784u92a3m5w475w3w35tyd6v3qumkze80j8a6h5tuqq5xe8y
 lucid.selectWalletFromSeed('damp wish scrub sentence vibrant gauge tumble raven game extend winner acid side amused vote edge affair buzz hospital slogan patient drum day vital');
 
 const { paymentCredential } = lucid.utils.getAddressDetails(
