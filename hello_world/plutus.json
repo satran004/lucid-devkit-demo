@@ -1,0 +1,65 @@
+{
+  "preamble": {
+    "title": "aiken-lang/hello_world",
+    "description": "Aiken contracts for project 'aiken-lang/hello_world'",
+    "version": "0.0.0",
+    "plutusVersion": "v2",
+    "license": "Apache-2.0"
+  },
+  "validators": [
+    {
+      "title": "hello_world.hello_world",
+      "datum": {
+        "title": "datum",
+        "schema": {
+          "$ref": "#/definitions/hello_world~1Datum"
+        }
+      },
+      "redeemer": {
+        "title": "redeemer",
+        "schema": {
+          "$ref": "#/definitions/hello_world~1Redeemer"
+        }
+      },
+      "compiledCode": "590111010000323232323232323232322223232533300a3232533300c002100114a066646002002444a66602200429404c8c94ccc040cdc78010018a5113330050050010033014003375c60240046eb0cc01cc024cc01cc024011200048040dd71980398048012400066e3cdd7198031804001240009110d48656c6c6f2c20576f726c642100149858c8014c94ccc028cdc3a400000226464a66601e60220042930b1bae300f0013008005163008004320033253330093370e900000089919299980718080010a4c2c6eb8c038004c01c00c58c01c008cc0040052000222233330073370e0020060164666600a00a66e000112002300d001002002230053754002460066ea80055cd2ab9d5573caae7d5d0aba21",
+      "hash": "d3f389087ab44de67b528b0b47a24be5f5306b871d78f459ab277b05"
+    }
+  ],
+  "definitions": {
+    "ByteArray": {
+      "dataType": "bytes"
+    },
+    "hello_world/Datum": {
+      "title": "Datum",
+      "anyOf": [
+        {
+          "title": "Datum",
+          "dataType": "constructor",
+          "index": 0,
+          "fields": [
+            {
+              "title": "owner",
+              "$ref": "#/definitions/ByteArray"
+            }
+          ]
+        }
+      ]
+    },
+    "hello_world/Redeemer": {
+      "title": "Redeemer",
+      "anyOf": [
+        {
+          "title": "Redeemer",
+          "dataType": "constructor",
+          "index": 0,
+          "fields": [
+            {
+              "title": "msg",
+              "$ref": "#/definitions/ByteArray"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
